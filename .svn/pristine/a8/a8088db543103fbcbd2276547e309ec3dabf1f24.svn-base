@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" ng-app="Deibold">
+<head>
+	<meta charset="utf-8">
+	<title>Alex Deibold: Professional Snowboarder</title>
+
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/normalize/2.1.3/normalize.min.css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="assets/styles/site.min.css" />
+</head>
+<body>
+
+<div class="jumbotron transparent">
+    <h1>Alex Deibold</h1>
+    <h2>coming soon...</h2>
+</div>
+
+	<!-- <div class="container">
+		<header class="row">
+			<nav role="navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<a href="javascript:void(0);" class="navbar-brand">Alex Deibold</a>
+				</div>
+
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="javascript:void(0);">Home</a></li>
+						<li><a href="javascript:void(0);">About</a></li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);">Sponsors <b class="caret"></b></a>
+							<ul role="menu" class="dropdown-menu">
+								<li><a href="javascript:void(0);">Sponsor 1</a></li>
+								<li><a href="javascript:void(0);">Sponsor 2</a></li>
+								<li><a href="javascript:void(0);">Sponsor 3</a></li>
+								<li class="divider"></li>
+								<li><a href="javascript:void(0);">Want to sponsor me?</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);">Photos</a></li>
+						<li><a href="javascript:void(0);">Results</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="javascript:void(0);">Facebook</a></li>
+						<li><a href="javascript:void(0);">Twitter</a></li>
+						<li><a href="javascript:void(0);">Instagram</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<div class="content row">
+			<ng-view></ng-view>
+		</div>
+
+		<footer class="row">
+			<nav role="navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<a href="javascript:void(0);" class="navbar-brand">Professional Snowboarder</a>
+				</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="javascript:void(0);">Facebook</a></li>
+						<li><a href="javascript:void(0);">Twitter</a></li>
+						<li><a href="javascript:void(0);">Instagram</a></li>
+					</ul>
+				</div>
+			</nav>
+		</footer> -->
+	</div>
+
+
+
+	<!-- SCRIPTS -->
+		<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="http://code.angularjs.org/1.2.0/angular.js"></script>
+		<script type="text/javascript" src="http://code.angularjs.org/1.2.0/angular-resource.min.js"></script>
+		<script type="text/javascript" src="http://code.angularjs.org/1.2.0/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="http://code.angularjs.org/1.2.0/angular-route.min.js"></script>
+
+		<!-- App -->
+		<script type="text/javascript" src="ng/app.js"></script>
+
+		<!-- Controllers -->
+		<script type="text/javascript" src="ng/home/HomeController.js"></script>
+
+		<!-- Services -->
+
+		<!-- Directives -->
+
+		<!-- Filters -->
+	<!-- SCRIPTS -->
+</body>
+</html>

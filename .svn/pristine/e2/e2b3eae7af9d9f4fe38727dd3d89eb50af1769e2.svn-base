@@ -1,0 +1,17 @@
+<div class="row-fluid">
+	<ul class="span2 nav nav-pills jp nav-stacked">
+		<li ng-class="{active: view.isVisible}" ng-repeat="view in pageViews">
+			<a href="javascript:void(0)" data-toggle="tab" ng-click="changeView(view)">{{view.name}}</a>
+		</li>
+	</ul>
+
+	<div class="span10">
+		<h1 class="special">{{pageTitle}}</h1>
+		<p class="lead">{{leadText}}</p>
+
+		<div ng-show="view.isVisible" ng-repeat="view in pageViews">
+			<h2 class="special">{{view.name}}</h2>
+			<div my-dir="view.template"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,215 @@
+//
+	.box-sizing(@boxmodel) {
+		-webkit-box-sizing: @boxmodel;
+		-moz-box-sizing: @boxmodel;
+		box-sizing: @boxmodel;
+	}
+
+	.box-shadow(@shadow) {
+		-webkit-box-shadow: @shadow;
+		-moz-box-shadow: @shadow;
+		box-shadow: @shadow;
+	}
+
+	.border-radius(@radius) {
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+	}
+
+	.borderRadius() {
+		-html-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+	}
+
+	.background-cover() {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.vertical(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+		background-image: -webkit-gradient(linear, left @start-percent, left @end-percent, from(@start-color), to(@end-color)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(top, @start-color, @start-percent, @end-color, @end-percent); // Safari 5.1+, Chrome 10+
+		background-image:  -moz-linear-gradient(top, @start-color @start-percent, @end-color @end-percent); // FF 3.6+
+		background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10
+		background-repeat: repeat-x;
+	}
+
+	.vertical-three-colors(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start-color), color-stop(@color-stop, @mid-color), to(@end-color));
+		background-image: -webkit-linear-gradient(@start-color, @mid-color @color-stop, @end-color);
+		background-image: -moz-linear-gradient(top, @start-color, @mid-color @color-stop, @end-color);
+		background-image: linear-gradient(@start-color, @mid-color @color-stop, @end-color);
+		background-repeat: no-repeat;
+	}
+
+	.depressed() {
+		background-image: none;
+		background-color: #000;
+		border-color: #000;
+		background-repeat: no-repeat;
+		color: #FFF;
+	}
+
+	.gradientBar(@primaryColor, @secondaryColor, @textColor) {
+		color: @textColor;
+		.vertical-three-colors(@primaryColor; @secondaryColor; 65%; @secondaryColor);
+	}
+//
+
+// HIGHLIGHTS
+	.highlight-alert() {
+		background-color: @alertBackgroundColor;
+		border: 1px solid @alertBorderColor;
+	}
+
+	.highlight-warning() {
+		background-color: @warningBackgroundColor;
+		border: 1px solid @warningBorderColor;
+	}
+
+	.highlight-success() {
+		background-color: @successBackgroundColor;
+		border: 1px solid @successBorderColor;
+	}
+
+	.highlight-info() {
+		background-color: @infoBackgroundColor;
+		border: 1px solid @infoBorderColor;
+	}
+// HIGHLIGHTS
+
+//
+	.arrowMakerLeft(@backgroundColor: #EEEEEE, @borderColor: #CCCCCC) {
+		background: none repeat scroll 0 0 @backgroundColor;
+		border: 1px solid @borderColor;
+		position: relative;
+
+		&:before {
+			border-bottom: 5px solid rgba(0, 0, 0, 0);
+			// border-right: 5px solid rgba(0, 0, 0, 0.2);
+			border-right: 5px solid @borderColor;
+			border-top: 5px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			left: -6px;
+			position: absolute;
+			top: 8px;
+		}
+
+		&:after {
+			border-bottom: 4px solid rgba(0, 0, 0, 0);
+			border-right: 4px solid @backgroundColor;
+			border-top: 4px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			left: -4px;
+			position: absolute;
+			top: 9px;
+		}
+	}
+
+	.arrowMakerRight(@backgroundColor: #EEEEEE, @borderColor: #CCCCCC) {
+		background: none repeat scroll 0 0 @backgroundColor;
+		border: 1px solid @borderColor;
+		position: relative;
+
+		&:before {
+			border-bottom: 5px solid rgba(0, 0, 0, 0);
+			border-left: 5px solid @borderColor;
+			border-top: 5px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			right: -6px;
+			position: absolute;
+			top: 9px;
+		}
+
+		&:after {
+			border-bottom: 4px solid rgba(0, 0, 0, 0);
+			border-left: 4px solid @backgroundColor;
+			border-top: 4px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			right: -4px;
+			position: absolute;
+			top: 10px;
+		}
+	}
+
+	.arrowMakerTop(@backgroundColor: #EEEEEE, @borderColor: #CCCCCC) {
+		background: none repeat scroll 0 0 @backgroundColor;
+		border: 1px solid @borderColor;
+		position: relative;
+
+		&:before {
+			border-left: 5px solid rgba(0, 0, 0, 0);
+			border-bottom: 5px solid @borderColor;
+			border-right: 5px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			top: -6px;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+		}
+
+		&:after {
+			border-left: 4px solid rgba(0, 0, 0, 0);
+			border-bottom: 4px solid @backgroundColor;
+			border-right: 4px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			top: -4px;
+			position: absolute;
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+
+	.arrowMakerBottom(@backgroundColor: #EEEEEE, @borderColor: #CCCCCC) {
+		background: none repeat scroll 0 0 @backgroundColor;
+		border: 1px solid @borderColor;
+		position: relative;
+
+		&:before {
+			border-left: 5px solid rgba(0, 0, 0, 0);
+			border-top: 5px solid @borderColor;
+			border-right: 5px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			bottom: -6px;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+		}
+
+		&:after {
+			border-left: 4px solid rgba(0, 0, 0, 0);
+			border-top: 4px solid @backgroundColor;
+			border-right: 4px solid rgba(0, 0, 0, 0);
+			content: "";
+			display: inline-block;
+			bottom: -4px;
+			position: absolute;
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+//
+
+.ie7-restore-left-whitespace() {
+	*margin-left: .3em;
+
+	&:first-child {
+		*margin-left: 0;
+	}
+}
+
+.ie7-restore-right-whitespace() {
+	*margin-right: .3em;
+}

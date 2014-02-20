@@ -1,0 +1,18 @@
+'use strict';
+
+StyleGuide.controller('LayoutController', function LayoutController ($scope, ViewService) {
+	$scope.pageTitle = "Layouts";
+	$scope.leadText = 'This section provides examples of our layouts';
+
+	$scope.pageViews = [
+		{
+			name: 'Spacing',
+			isVisible: true,
+			template: '<div></div>'
+		}
+	];
+
+	$scope.changeView = function(view) {
+		ViewService.toggleView(view, $scope.pageViews);
+	}
+});

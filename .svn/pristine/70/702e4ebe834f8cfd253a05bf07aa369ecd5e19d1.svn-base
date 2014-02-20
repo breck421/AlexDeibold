@@ -1,0 +1,10 @@
+'use strict';
+
+App.factory("SocialMediaService", function() {
+	return {
+		get: function() {
+			var serviceUrl = "db/SocialMedia.json";
+			return AjaxService.makeCall(serviceUrl);
+		}
+	};
+});

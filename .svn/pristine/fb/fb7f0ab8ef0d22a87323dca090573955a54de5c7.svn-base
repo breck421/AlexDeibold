@@ -1,0 +1,47 @@
+@bannerColor: #262626;
+@alertBackgroundColor: #F0CED8;
+@alertBorderColor: #F1918D;
+@warningBackgroundColor: #fbf7c0;
+@warningBorderColor: #FBBB8A;
+@successBackgroundColor: #d3e8d1;
+@successBorderColor: #9FD795;
+@infoBackgroundColor: #ddcef2;
+@infoBorderColor: #BC9EE6;
+
+@baseImageUrl: 					"http://s3-us-west-2.amazonaws.com/clear.collateral.ui/images/";
+@iconImageUrl: 					"@{baseImageUrl}icon/";
+@functionalIconImageUrl:		"@{iconImageUrl}functional/";
+@featuredIconImageUrl:			"@{iconImageUrl}featured/";
+@indicatorIconImageUrl:			"@{iconImageUrl}indicator/";
+@iconSpritePath:				"@{functionalIconImageUrl}functional-icon-sprites-black.png";
+@iconDisableSpritePath:			"@{functionalIconImageUrl}glyphicons-halflings-disable.png";
+@iconWhiteSpritePath:			"@{functionalIconImageUrl}functional-icon-sprites-white.png";
+@iconDisableWhiteSpritePath:	"@{functionalIconImageUrl}glyphicons-halflings-white-disable.png";
+@featuredIconSpritePath:		"@{featuredIconImageUrl}sprites.png";
+@indicatorIconSpritePath:		"@{indicatorIconImageUrl}sprites.png";
+
+// Button Colors
+// -------------------------
+@btn-primary-color:             #fff;
+@btn-primary-bg:                #00C1DA;
+@btn-primary-border:            darken(@btn-primary-bg, 5%);
+@btn-primary-highlight:         #017AD6; //lighten(@btn-primary-bg, 25%);
+
+@btn-special-color:				#333;//@gray-dark;
+@btn-special-bg:				#F8F10D;//#FFE100;//@gold; F8F10D
+@btn-special-border:			darken(@btn-special-bg, 5%);
+@btn-special-highlight:			#FFC222;//lighten(@btn-special-bg, 10%);
+
+@btn-default-color:             #333;//@gray-dark;
+@btn-default-bg:                #F2F2F2;//@grey25;
+@btn-default-border:            darken(@btn-default-bg, 5%);
+@btn-default-highlight:         #BFBFBF; //lighten(@btn-default-bg, 10%);
+
+@link-color:            		#0079d6; //@brand-primary;
+@link-hover-color:      		darken(@link-color, 15%);
+@btn-link-disabled-color:       #595959; //@gray-light;
+
+@btn-inverse-color:				#FFF;
+@btn-inverse-bg:				#444;
+@btn-inverse-border:			darken(@btn-inverse-bg, 5%);
+@btn-inverse-highlight:			lighten(@btn-inverse-bg, 10%); //#060606

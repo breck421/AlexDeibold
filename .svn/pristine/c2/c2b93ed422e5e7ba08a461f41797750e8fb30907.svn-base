@@ -1,0 +1,91 @@
+@import 'variables.less';
+@import 'mixins.less';
+
+*, *:before, *:after {
+	// -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	.box-sizing(border-box);
+ }
+
+html {
+	background: url(../images/bkgd.jpg) no-repeat center center fixed;
+	.background-cover();
+}
+
+body {
+	background-color: rgba(255, 255, 255, 0);
+	color: #F2F2F;
+}
+
+.container {
+	width: 100%;
+}
+
+header {
+
+	.navbar {
+		margin: 0;
+		.gradientBar(#AAA9A2; #FAFBE9; #262626);
+
+		.active {
+			a {
+				background-color: rgba(255,255,255,0);
+			}
+		}
+	}
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	&.row {
+		margin: 0;
+	}
+
+	.navbar {
+		margin-bottom: 0;
+	}
+}
+
+nav {
+	.navbar-header {
+		.navbar-brand {
+			font-size: 24px;
+			color: #262626;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.transparent {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.jumbotron {
+	margin-left: 25%;
+	margin-top: 18%;
+	width: 50%;
+	padding: 0;
+
+	h1 {
+		border: 0 none;
+		color: #F2F2F2 !important;
+		font-size: 123px;
+		font-weight: lighter;
+		line-height: 100px;
+		margin: 0;
+		padding: 0;
+		text-align: center !important;
+		text-decoration: none !important;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		color: #F2F2F2;
+		line-height: 0;
+		text-align: right;
+	}
+}

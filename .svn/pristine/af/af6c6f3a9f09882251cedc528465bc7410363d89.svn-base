@@ -1,0 +1,48 @@
+'use strict';
+
+var Deibold = angular.module('Deibold', ['ngResource', 'ngRoute', 'ngSanitize']);
+
+Deibold.config(function ($routeProvider) {
+	$routeProvider
+	.when('/home', {
+		templateUrl: 'ng/home/home.html',
+		controller: 'HomeController',
+		activeTab: 'home'
+	})
+	.otherwise({redirectTo: 'home'})
+});
+
+Deibold.directive("myDir", function($compile) {
+    return {
+        link: function(scope, elem, attrs) {
+            scope.$watch(
+                function(scope) {
+                    return scope.$eval(attrs.myDir);
+                },
+
+                function(value) {
+                    var e = $compile(value)(scope);
+                    elem.contents().remove();
+                    elem.append(e);
+                }
+            );
+        }
+    };
+});
+
+Deibold.factory('ViewService', function ViewService() {
+	return {
+		toggleView: function(activeView, views) {
+			for(var i = 0, j = views.length; i < j; i++) {
+				var view = views[i];
+
+				if(view.name === activeView.name) {
+					view.isVisible = true;
+				}
+				else {
+					view.isVisible = false;
+				}
+			}
+		}
+	}
+});

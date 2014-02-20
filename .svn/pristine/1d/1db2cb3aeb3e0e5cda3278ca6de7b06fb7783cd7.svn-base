@@ -1,0 +1,21 @@
+.navbar {
+	.navbar-header {
+		display: inline-block;
+	}
+
+	.nav {
+		display: inline-block;
+
+		li {
+			display: inline-block;
+
+			a {
+				padding: 5px 10px;
+			}
+		}
+
+		&.nav-right {
+			float: right;
+		}
+	}
+}

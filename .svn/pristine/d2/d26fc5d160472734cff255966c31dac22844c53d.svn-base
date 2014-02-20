@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-ng-app="App">
+<head>
+	<meta charset="utf-8">
+	<title>Alex Deibold: Professional Snowboarder</title>
+
+	<link type="text/css" rel="stylesheet" href="libs/styles/normalize_2.1.2.min.css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="assets/styles/main.min.css" />
+</head>
+<body>
+
+<div class="wrapper">
+	<header>
+		<nav role="navigation" class="nav navbar-inverse">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/home">Alex Deibold</a>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="javascript:void(0);">Facebook</a></li>
+				<li><a href="javascript:void(0);">Twitter</a></li>
+				<li><a href="javascript:void(0);">Instagram</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/home">Home</a></li>
+				<li><a href="#/about">About</a></li>
+				<li><a href="#/photos">Photos</a></li>
+				<li><a href="#/contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<ng-view></ng-view>
+</div>
+
+	<!-- SCRIPTS -->
+		<script type="text/javascript" src="libs/js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
+		<!-- NG -->
+		<script type="text/javascript" src="libs/js/angular_1.2.10/angular.js"></script>
+		<script type="text/javascript" src="libs/js/angular_1.2.10/angular-animate.min.js"></script>
+		<script type="text/javascript" src="libs/js/angular_1.2.10/angular-resource.min.js"></script>
+		<script type="text/javascript" src="libs/js/angular_1.2.10/angular-route.min.js"></script>
+		<script type="text/javascript" src="libs/js/angular_1.2.10/angular-sanitize.min.js"></script>
+
+		<!-- APP -->
+		<script type="text/javascript" src="app/app.js"></script>
+
+		<!-- SERVICE -->
+		<script type="text/javascript" src="app/services/EmailService.js"></script>
+		<script type="text/javascript" src="app/services/AjaxService.js"></script>
+
+		<!-- HOME -->
+		<script type="text/javascript" src="app/views/home/HomeController.js"></script>
+
+		<!-- ABOUT -->
+		<script type="text/javascript" src="app/views/about/AboutController.js"></script>
+
+		<!-- PHOTO -->
+		<script type="text/javascript" src="app/views/photos/PhotosController.js"></script>
+
+		<!-- CONTACT -->
+		<script type="text/javascript" src="app/views/contact/ContactController.js"></script>
+
+	<!-- SCRIPTS -->
+</body>
+</html>
